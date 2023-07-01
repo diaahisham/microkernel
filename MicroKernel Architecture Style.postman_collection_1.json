@@ -1,0 +1,188 @@
+{
+	"info": {
+		"_postman_id": "e2d62219-c4a0-4994-88b4-44b0e23949b0",
+		"name": "MicroKernel Architecture Style",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15844247"
+	},
+	"item": [
+		{
+			"name": "Pay",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"payment_method\": \"test\",\r\n    \"payload\":{}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7070/pay",
+					"host": [
+						"localhost"
+					],
+					"port": "7070",
+					"path": [
+						"pay"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "no payment methods registered",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"payment_method\": \"test\",\r\n    \"payload\":{}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:7070/pay",
+							"host": [
+								"localhost"
+							],
+							"port": "7070",
+							"path": [
+								"pay"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Correlation-Id"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET,HEAD,PUT,PATCH,POST,DELETE"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 30 Jun 2023 23:57:32 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "45"
+						}
+					],
+					"cookie": [],
+					"body": "\"there are no payment methods registered yet\""
+				}
+			]
+		},
+		{
+			"name": "Refund",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"payment_method\": \"test\",\r\n    \"payload\":{}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7070/refund",
+					"host": [
+						"localhost"
+					],
+					"port": "7070",
+					"path": [
+						"refund"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "no payment methods registered",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"payment_method\": \"test\",\r\n    \"payload\":{}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:7070/refund",
+							"host": [
+								"localhost"
+							],
+							"port": "7070",
+							"path": [
+								"refund"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Correlation-Id"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET,HEAD,PUT,PATCH,POST,DELETE"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 30 Jun 2023 23:59:03 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "45"
+						}
+					],
+					"cookie": [],
+					"body": "\"there are no payment methods registered yet\""
+				}
+			]
+		}
+	]
+}
