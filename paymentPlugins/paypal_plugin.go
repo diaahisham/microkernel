@@ -30,7 +30,7 @@ func (c PaypalPayment) Pay(payload interface{}) (string, error) {
 	if err == nil {
 		return fmt.Sprintf("payment done for usernamer: %s, with amount: %v", payment.Username, payment.Amount), nil
 	} else {
-		return "", errors.New("wrong payload for credit card payment")
+		return "", errors.New("wrong payload for paypal payment")
 	}
 }
 
@@ -42,6 +42,6 @@ func (c PaypalPayment) Refund(payload interface{}) (string, error) {
 	if err == nil {
 		return fmt.Sprintf("refund done for usernamer: %s, with amount: %v", payment.Username, payment.Amount), nil
 	} else {
-		return "", errors.New("wrong payload for credit card refund")
+		return "", errors.New("wrong payload for paypal refund")
 	}
 }
