@@ -13,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"payment_method\": \"creditcard\",\r\n    \"payload\":{\r\n        \"card_number\": \"123456789\",\r\n        \"password\": \"2587\",\r\n        \"amount\": 1500\r\n    }\r\n}",
+					"raw": "{\r\n    \"payment_method\": \"paypal\",\r\n    \"payload\":{\r\n        \"username\": \"user\",\r\n        \"password\": \"hfsdhhdfhfh\",\r\n        \"amount\": 2544\r\n    }\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -153,6 +153,67 @@
 					],
 					"cookie": [],
 					"body": "\"payment done for card number: 123456789, with amount: 1500\""
+				},
+				{
+					"name": "paypal payment",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"payment_method\": \"paypal\",\r\n    \"payload\":{\r\n        \"username\": \"user\",\r\n        \"password\": \"hfsdhhdfhfh\",\r\n        \"amount\": 2544\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:7070/pay",
+							"host": [
+								"localhost"
+							],
+							"port": "7070",
+							"path": [
+								"pay"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Correlation-Id"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET,HEAD,PUT,PATCH,POST,DELETE"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 01 Jul 2023 18:26:49 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "53"
+						}
+					],
+					"cookie": [],
+					"body": "\"payment done for usernamer: user, with amount: 2544\""
 				}
 			]
 		},
@@ -163,7 +224,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"payment_method\": \"creditcard\",\r\n    \"payload\":{\r\n        \"card_number\": \"123456789\",\r\n        \"password\": \"2587\",\r\n        \"amount\": 1500\r\n    }\r\n}",
+					"raw": "{\r\n    \"payment_method\": \"paypal\",\r\n    \"payload\":{\r\n        \"username\": \"user\",\r\n        \"password\": \"hfsdhhdfhfh\",\r\n        \"amount\": 2544\r\n    }\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -303,6 +364,67 @@
 					],
 					"cookie": [],
 					"body": "\"refund done for card number: 123456789, with amount: 1500\""
+				},
+				{
+					"name": "paypal refund",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"payment_method\": \"paypal\",\r\n    \"payload\":{\r\n        \"username\": \"user\",\r\n        \"password\": \"hfsdhhdfhfh\",\r\n        \"amount\": 2544\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:7070/refund",
+							"host": [
+								"localhost"
+							],
+							"port": "7070",
+							"path": [
+								"refund"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Correlation-Id"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET,HEAD,PUT,PATCH,POST,DELETE"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 01 Jul 2023 18:29:04 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "52"
+						}
+					],
+					"cookie": [],
+					"body": "\"refund done for usernamer: user, with amount: 2544\""
 				}
 			]
 		}

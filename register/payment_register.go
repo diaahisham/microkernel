@@ -10,6 +10,8 @@ func PaymentRegister(paymentMethod string) (interfaces.PaymentPluginInterface, e
 	switch paymentMethod {
 	case "creditcard":
 		return paymentPlugins.NewCreditCardPayment(), nil
+	case "paypal":
+		return paymentPlugins.NewPaypalPayment(), nil
 	default:
 		return nil, errors.New("there are no payment methods registered yet")
 
